@@ -7,11 +7,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport"
-          content="width-device-width"
-          ,
-          initial
-          scale="1.0">
+          content="width-device-width, initial scale= 1.0">
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
     <link rel="preconnect"
@@ -22,17 +20,33 @@
     <title>My Personal Introduction</title>
 
     <style>
+        /*-- Changed box-sizing for styling purposes */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /*-- Body styles - colors and font */
         body {
             background-color: #F9FAFA;
             font-size: 1rem;
             font-family: 'Poppins', sans-serif;
         }
 
+        /* Image styles - rounded corners */
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        /* Centered section content and reduced width of container */
         section {
             width: 75%;
             margin: 0 auto;
         }
 
+        /* Flex container for intro image and text */
         .introduction {
             display: flex;
             justify-content: center;
@@ -40,12 +54,13 @@
             padding-top: 2em;
         }
 
+        /* Flex container image styles */
         .introduction img {
-            max-width: 100%;
-            box-shadow: 8px 8px 5px #B89E90;
+            box-shadow: 0px 0px 20px #B89E90;
             align-self: center;
         }
 
+        /* h1 styles - fonts, color, spacing */
         h1 {
             color: #CB506F;
             font-size: 4rem;
@@ -55,6 +70,7 @@
             margin: 0 0 0.5em;
         }
 
+        /* paragraph styles - fonts, color, spacing */
         p {
             color: #1D2239;
             margin: 0 auto;
@@ -62,61 +78,75 @@
             line-height: 1.6;
         }
 
+        /* Styling for escape room container */
         .escape-room {
-            padding-top: 1.2em;
+            padding-top: 1em;
             width: 40%;
         }
 
+        /* h2 styles - fonts, color, spacing */
         h2 {
             color: #1D2239;
-            font-size: 1.7em;
+            font-size: 1.5em;
             text-align: center;
             text-decoration: underline;
         }
 
+        /* figure styling */
         figure {
             text-align: center;
             font-size: 1.1rem;
+        }
+
+        figcaption {
+            font-style: italic;
         }
     </style>
 </head>
 
 <body>
-    <section class="introduction">
-        <img src="images/profile.jpeg"
-             alt="Jennifer Morrison profile picture on front porch of house">
-        <div class="introduction-text">
-            <h1>Hi, my name is Jennifer.</h1>
-            <p>
-                I am currently a web development student at <a
-                   href="https://www.waketech.edu/"
-                   target="_blank">Wake Technical Community College</a>. I
-                have been homeschooling my children for the thirteen years, and as
-                they begin
-                to graduate and leave the nest, I am seeking new opportunities and
-                exploring new
-                career options.
-            </p>
-            <br>
-            <p>
-                Outside of school, I love playing card and board games. I also love jigsaw
-                puzzles
-                and completing escape rooms with my family.
-            </p>
-        </div>
-    </section>
+    <!-- Main Section Content-->
+    <main>
+        <!-- Introduction Section-->
+        <section class="introduction">
+            <img src="images/profile.jpeg"
+                 alt="Jennifer Morrison profile picture on front porch of house">
+            <div class="introduction-text">
+                <h1>Hi, my name is Jennifer.</h1>
+                <p>
+                    I am currently a web development student at <a
+                       href="https://www.waketech.edu/"
+                       target="_blank">Wake Technical Community College</a>. I
+                    have been homeschooling my children for the thirteen years, and as
+                    they begin
+                    to graduate and leave the nest, I am seeking new opportunities and
+                    exploring new
+                    career options.
+                </p>
+                <br>
+                <p>
+                    Outside of school, I love playing card and board games. I also love
+                    jigsaw
+                    puzzles
+                    and completing escape rooms with my family.
+                </p>
+            </div>
+        </section>
 
-    <section class="escape-room">
-        <h2>Our Latest Escape Room Adventure</h2>
-        <figure>
-            <img src="images/escape_room.jpeg"
-                 alt="Family picture at Yacht Heist Room of Total Escapes in Winston Salem, NC">
-            <figcaption> We conquered the Yacht Heist, our latest adventure at <a
-                   href="https://totalescapegame.com/"
-                   target="_blank">Total Escape</a> in Winston-Salem, NC.
-            </figcaption>
-        </figure>
-    </section>
+        <!-- Escape Room Section-->
+        <section class="escape-room">
+            <h2>Our Latest Escape Room Adventure</h2>
+            <!-- Figure includes image and caption -->
+            <figure>
+                <img src="images/escape_room.jpeg"
+                     alt="Family picture at Yacht Heist Room of Total Escapes in Winston Salem, NC">
+                <figcaption> We conquered the Yacht Heist, our latest adventure at <a
+                       href="https://totalescapegame.com/"
+                       target="_blank">Total Escape</a> in Winston-Salem, NC.
+                </figcaption>
+            </figure>
+        </section>
+    </main>
 </body>
 
 </html>
